@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Aurrafedoraa.Resume</title>
+    <link rel="icon" type="image" href="Picture/Logo 1.png">
+</head>
+
+<body>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+      * {box-sizing: border-box}
+    body {font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          background-color: rgb(240, 236, 231);
+  }
+    
+    .navbar {
+    width: 100%;
+    background-color: #5c4b6a;
+    overflow: auto;
+  }
+  
+  .navbar a{
+    float: left;
+    margin-right: 50px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(38, 56, 93);
+  }
+  
+  .active {
+    background-color: rgb(152, 129, 213);
+  }
+  
+  @media screen and (max-width: 500px ) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: MintCream;
+        width: 30%;
+        height: 300px;
+      }
+
+      .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+      
+      .tab button:hover {
+        background-color: Thistle;
+      }
+
+      .tab button.active {
+        background-color: Gainsboro;
+      }
+
+      .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        border: 1px solid HoneyDew;
+        width: 70%;
+        border-left: none;
+        height: 300px;
+        text-align: justify;
+      }
+
+      video.center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <body>
+    
+      <div class="navbar">
+        <a class="logo"><a href="#"><img src="Picture/Logo 2.png" style="width: 135px; height: 50px; margin-right: 200%;"></a>
+        <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="About.html"><i class="fa fa-user-circle-o"></i>About</a>  
+        <a href="Education.html"><i class="fa fa-mortar-board"></i>Education</a> 
+        <a href="Experiences.html"><i class="fa fa-fw fa-envelope"></i>Experiences</a>
+        <a href="Contact Info.html"><i class="fa fa-address-book-o"></i>Contact Info</a>
+      </div>
+
+      <h2>Key Summary</h2>
+      <p>Click on the buttons inside the tabbed menu:</p>
+      
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Motto</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Aims</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Quote of Life</button>
+      </div>
+      
+      <div id="London" class="tabcontent">
+        <h3>Motto</h3>
+        <p>"The best thing in life is being able to do what people say you're not able to do".</p>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h3>Goals</h3>
+        <p>Strive to become a better version of myself every day. This can include learning a new skill, reading a book, 
+          or engaging in activities that challenge my comfort zone. Maintain a healthy lifestyle by incorporating regular 
+          exercise, a balanced diet, and adequate sleep into my daily routine. My goals also eet professional goals to advance 
+          in my current field or explore new opportunities that align with my passions and interests and develop a budget and work 
+          towards financial independence by saving and investing in assets that will provide long-term growth. Next is, urture and 
+          maintain strong, healthy relationships with family and friends. This includes being a good listener, offering support, and 
+          spending quality time together. Last is Personal Happiness. Pursue hobbies and activities that bring joy and fulfillment to 
+          your life, and make time for relaxation and self-care.</p> 
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h3>Quote of Life</h3>
+        <p>“Ambition without knowledge is like a boat on dry land.” ― Mark Lee</p>
+        <p>“When there’s too much grief to handle, part of your brain clicks off and you concentrate on the small details that surround you. At the end of time, when Judgment Day finally arrives, a great many of us will be rearranging the cereal boxes in the pantry or cleaning out the shower stall.”
+          ― Mark Lee</p>
+        <p>“Be yourself; everyone else is already taken.” —Oscar Wilde</p>
+        <p>“I can accept failure, everyone fails at something. But I can’t accept not trying.” —Michael Jordan</p>
+        <p>“A person who never made a mistake never tried anything new.” —Albert Einstein</p>
+      </div>
+
+      <h2>Video Resume</h2>
+      <p>Adding Video on my Webpage</p>
+        <video width="500px" height="300px" controls="controls">
+        <source src="Picture/VIDEO RESUME AURRA FEDORA BINTI MATDIRIS (2023509961).MOV" type="video/mp4" />
+       </video>
+      
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+      </script>
+  
+         
+      </body>
+      </html> 
